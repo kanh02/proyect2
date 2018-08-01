@@ -1,13 +1,15 @@
-console.log("Starting javascript ...")
+/*console.log("Starting javascript ...")
 
 
 var myName ="Oscar";
 console.log("Oscar");
+
 var edad = 31;
 console.log(31);
-var ignasiAge = 32;
-var ageDiff = 0;
-console.log(edad - ignasiAge);
+
+var iAge = 32;
+var ageDif = 0;
+console.log(edad - iAge);
 
 
 
@@ -17,27 +19,24 @@ else if (edad > 21){
 console.log("tiene mas de 21 años");}
 
 
-	var names =["alberto","esneider","oscar","mica","raul"];
-	console.log(names.length);
-	console.log(names[0]);
-	console.log(names[4]);
-	console.log(names[0+1]);
-
-
-
-
-for( var i = 0; i < names.length; i++){
-	console.log(names[i]);
-}
-
-
+var names =["alberto","esneider","oscar","mica","raul"];
+console.log(names.length);
+console.log(names[0]);
+console.log(names[4]);
+console.log(names[0+1]);
 
 var ages =[24,28,29,31,33];
-console.log(ages.length);
-for (var i = 0; i < ages.length; i++){
-	console.log(ages[i]);
+
+
+function printVariables(array){
+	for( var i = 0; i < array.length; i++){
+//		console.log(array.length);
+		console.log(array[i]);
+}
 }
 
+printVariables(names);
+printVariables(ages);
 
 
 i=0;
@@ -66,6 +65,8 @@ function ages(){
 
 var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
 var index = 1;
+
+
 function compare(a, b){
 	if (array < index){return -1;}
 	if (array > index){return 1;}
@@ -76,21 +77,21 @@ console.log(array[1]);
 
 
 
+var emptyArray=[];
 
-var array2 = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
-function find(){
-	var array2=[];
-	for (i=0; i < array.length; i++){
-			for (j=i+1; j < array.length; j++){
-				if(array[i] === array[j]){
-					array2.push(array[i])
-					console.log(array2);
+
+function find(par1,par2){
+	for (i=0; i < par1.length; i++){
+			for (j=i+1; j < par1.length; j++){
+				if(par1[i] === par1[j]){
+					par2.push(par1[i]);
+					console.log(par2);
 				}
 			}
 	}
 }
 
-find(array2);
+find(array,emptyArray);
 		
 
 
@@ -114,3 +115,61 @@ function reversed(){
 }
 
 reversed();
+
+
+
+
+var str = 'webmaster';
+ordenalfabetico(str); 
+
+function ordenalfabetico(String){
+	var strReverse = String.split('').sort().join(''); console.log(strReverse); 
+}
+
+var st = "Principe of Persia.";
+strToLower(st);
+
+function strToLower(String){
+    var stu = String.toUpperCase();
+	console.log(stu)
+}
+
+
+
+ function findlongest(str){
+    var words = str.split(' ');
+    var longest = words[0];
+    
+    for (var i = 0; i < words.length; i++){
+      if(words[i].length > longest.length) {
+        longest = words[i];
+      }
+    }
+    
+    return console.log(longest);
+ } 
+ findlongest('Web Development Tutorial');
+
+
+*/
+
+
+/*JavaScript Exercises 2
+Exercise 1
+Now let's add content to an HTML document instead of writing to the console.
+Write a function called addBands(myBandList) that will list your favorite bands.
+Start with an empty HTML page that contains a level 1 heading "My Favorite Bands"
+and an empty unordered list with ID band-list.
+Your function should use the JavaScript DOM to create list items and add them
+to the unordered list, with one list item for each string in array myBandList.
+For example, if I call:
+  addBands(['Dire Straits', 'Kansas', 'Steely Dan']);
+The function will add three list items to the unordered list.
+Exercise 2
+Write a function called addMultTable(rows, cols) that will create a multiplication
+table like this. Start with an empty HTML page that only contains a level 1 heading.
+Your function should use the JavaScript DOM to insert an HTML table after the heading.
+For example, if I call:
+    addMultTable(4, 8);
+It will create an HTML table with 4 rows
+and 8 columns, and append it after the level 1 heading.
